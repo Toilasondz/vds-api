@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "functions": {
+    "api/web.js":   { "maxDuration": 10 },
+    "api/admin.js": { "maxDuration": 10 },
+    "api/app.js":   { "maxDuration": 10 }
+  },
+  "routes": [
+    { "src": "/login",                    "dest": "/api/web" },
+    { "src": "/admin/api/keys$",          "dest": "/api/admin?path=keys" },
+    { "src": "/admin/api/create",         "dest": "/api/admin?path=create" },
+    { "src": "/admin/api/reset-device",   "dest": "/api/admin?path=reset-device" },
+    { "src": "/admin/api/toggle-status",  "dest": "/api/admin?path=toggle-status" },
+    { "src": "/admin/api/delete",         "dest": "/api/admin?path=delete" },
+    { "src": "/api/verify",               "dest": "/api/app?path=verify" },
+    { "src": "/api/sign-out",             "dest": "/api/app?path=sign-out" },
+    { "src": "/api/web(.*)",              "dest": "/api/web?path=$1" },
+    { "src": "/(.*)",                     "dest": "/api/web" }
+  ]
+}

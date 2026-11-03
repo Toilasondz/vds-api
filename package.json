@@ -1,0 +1,17 @@
+{
+  "name": "vds-license-manager",
+  "version": "1.0.0",
+  "description": "License Key Manager for iOS Tweak - Vercel Deployment",
+  "main": "api/index.js",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'No build step required'"
+  },
+  "dependencies": {
+    "@vercel/kv": "^1.0.0",
+    "bcryptjs": "^2.4.3"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
